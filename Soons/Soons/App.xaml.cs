@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soons.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,9 @@ namespace Soons
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            XF.Material.Forms.Material.Init(this);
+
+            MainPage = new ResumenView();
         }
 
         protected override void OnStart()
