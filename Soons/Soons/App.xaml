@@ -9,6 +9,7 @@
             <Setter Property="HeightRequest" Value="{OnPlatform iOS='120', Android='228'}"/>
             <Setter Property="HasShadow"  Value="False" />
             </Style>
+           
             <Style x:Key="stlContactBtn" TargetType="Button">
                 <Setter Property="TranslationY"     Value="-50"/>
                 <Setter Property="TranslationX"     Value="45"/>

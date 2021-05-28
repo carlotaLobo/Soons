@@ -5,19 +5,25 @@
     <ContentPage.Content>
         
         <StackLayout >
-            <Grid BackgroundColor="White">
+            <Grid BackgroundColor="White" Padding="0,5,0,5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" 
-                       Source="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/a6f9b10b-3d43-4aaf-9017-5f3da81d9a13/fecha-de-lanzamiento-de-las-overbreak-khaki.jpg" 
-                       VerticalOptions="Start"/>
+                <AbsoluteLayout >
+                     <Image Grid.Row="0" 
+                            AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                            Source="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/a6f9b10b-3d43-4aaf-9017-5f3da81d9a13/fecha-de-lanzamiento-de-las-overbreak-khaki.jpg" 
+                            VerticalOptions="Start"
+                       />
+                </AbsoluteLayout>
+               
                 <StackLayout Grid.Row="1" 
                              BackgroundColor="White" 
                              VerticalOptions="End">
-                    <Frame CornerRadius="40" Style="{StaticResource stlMainFrame}">
-                        <Grid Padding="25,10,25,0" RowSpacing="0">
+                    <Frame Style="{StaticResource stlMainFrame}">
+                        <Grid Padding="25,0,25,0" RowSpacing="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -31,7 +37,6 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-
                             <Label Grid.Row="0" 
                                    Grid.Column="0" 
                                    Grid.ColumnSpan="3" 
@@ -83,16 +88,15 @@
                             <Button Grid.Row="5" Grid.Column="0" 
                                     TextColor="White" BackgroundColor="#2193f3" 
                                     Text="Añadir" Margin="0,20,0,2" 
-                                    FontSize="15" HeightRequest="45"/>
+                                    FontSize="13" HeightRequest="45"/>
                             <Button Grid.Row="5" Grid.Column="1"  
                                     TextColor="White" BackgroundColor="#2193f3" 
                                     Text="Check Out" Margin="0,20,0,2" 
-                                    FontSize="15" HeightRequest="45"/>
+                                    FontSize="13" HeightRequest="45"/>
                             <Button Grid.Row="5" Grid.Column="2"  
                                     TextColor="White" BackgroundColor="#2193f3" 
                                     Text="Modificar" Margin="0,20,0,2" 
-                                    FontSize="15" HeightRequest="45"/>
-
+                                    FontSize="13" HeightRequest="45"/>
                         </Grid>
                     </Frame>
                 </StackLayout>
