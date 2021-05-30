@@ -136,4 +136,10 @@
       <Name>Soons</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\qr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\qrcode.png" />
+  </ItemGroup>
 </Project>
