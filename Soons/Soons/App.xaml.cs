@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Soons.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Soons
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Tabbed());
         }
 
         protected override void OnStart()
