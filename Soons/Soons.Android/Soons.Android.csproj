@@ -59,6 +59,9 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>5.0.0.2012</Version>
     </PackageReference>
+    <PackageReference Include="XF.Material">
+      <Version>1.7.8</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soons.Views.ResumenView">
+    <ContentPage.Content>
+        
+        <StackLayout >
+            <Grid BackgroundColor="White" Padding="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                  
+                </Grid.RowDefinitions>
+                <AbsoluteLayout >
+                    <Image Grid.Row="0" 
+                            AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                            Source="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/a6f9b10b-3d43-4aaf-9017-5f3da81d9a13/fecha-de-lanzamiento-de-las-overbreak-khaki.jpg" 
+                            VerticalOptions="Center"
+                       />
+                </AbsoluteLayout>
+                <StackLayout Grid.Row="1" 
+                             BackgroundColor="White" 
+                             VerticalOptions="End">
+                    <Frame Style="{StaticResource stlMainFrame}">
+                        <Grid Padding="25,0,25,0" RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                          
+                            <Label Grid.Row="0" 
+                                   Grid.Column="0" 
+                                   Grid.ColumnSpan="3" 
+                                   Text="Nike OverBreak SP" 
+                                   FontAttributes="Bold" 
+                                   FontSize="30" HorizontalOptions="Center"/>
+                            <Label Grid.Row="1" 
+                                   Grid.Column="0" 
+                                   Text="20%" 
+                                   TextColor="Green" 
+                                   FontSize="16"
+                                   HorizontalOptions="Center"/>
+                                <Label Grid.Row="2" 
+                                   Grid.Column="0" 
+                                   HorizontalOptions="Center" 
+                                   FontSize="16">
+                                    <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Stock" FontAttributes="Bold" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>                                
+                      
+
+                            <Label Grid.Row="3" 
+                                   Grid.Column="0" 
+                                   Text="36 - 4" 
+                                   Style="{StaticResource stlBoardTitle}" />
+                            <Label Grid.Row="4" 
+                                   Grid.Column="0" 
+                                   Text="37 - 3"
+                                    Style="{StaticResource stlBoardTitle}"
+                                   />
+                            <Label Grid.Row="3" 
+                                   Grid.Column="1" 
+                                   Text="38 - 77" 
+                                   Style="{StaticResource stlBoardTitle}"/>
+                            <Label Grid.Row="4" 
+                                   Grid.Column="1" 
+                                   Text="39 - 88" 
+                                   Style="{StaticResource stlBoardTitle}"/>
+                            <Label Grid.Row="3" 
+                                   Grid.Column="2" 
+                                   Text="40 - 33" 
+                                   Style="{StaticResource stlBoardTitle}"/>
+                            <Label Grid.Row="4" 
+                                   Grid.Column="2" 
+                                   Text="41 - 9" 
+                                   Style="{StaticResource stlBoardTitle}"/>
+                            <Button Grid.Row="5" Grid.Column="0" 
+                                    TextColor="White" 
+                                    BackgroundColor="#222725" 
+                                    Text="Añadir" Margin="0,20,0,2" 
+                                    FontSize="13" HeightRequest="45"/>
+                            <Button Grid.Row="5" Grid.Column="1"  
+                                    TextColor="White" BackgroundColor="#222725" 
+                                    Text="Check Out" Margin="0,20,0,2" 
+                                    FontSize="13" HeightRequest="45"/>
+                            <Button Grid.Row="5" Grid.Column="2"  
+                                    TextColor="White" BackgroundColor="#222725" 
+                                    Text="Modificar" Margin="0,20,0,2" 
+                                    FontSize="13" HeightRequest="45"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+               
+            </Grid>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
