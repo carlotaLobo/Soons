@@ -17,7 +17,7 @@ namespace Soons.Views
         public Tabbed()
         {
             InitializeComponent();
-            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            //On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
     }
 }

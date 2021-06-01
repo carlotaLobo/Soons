@@ -2,6 +2,7 @@
 using Soons.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -45,6 +46,13 @@ namespace Soons.Services
         public async Task<int> GetTotalSizes()
         {
             return await this.ApiGet<int>("api/TotalSizes");
+        }
+
+        public async Task<Prod> ProductoBySKU(string codigo)
+        {
+            List<Prod> productos = await this.ApiGet<List<Prod>>("/api/GetProducts");
+            Prod producto = productos.First(x => x.SKU == codigo);
+            return producto;
         }
     }
 }

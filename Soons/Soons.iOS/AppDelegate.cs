@@ -1,4 +1,15 @@
-﻿using System;
+using Syncfusion.XForms.iOS.ProgressBar;
+using Syncfusion.XForms.iOS.Cards;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.XForms.iOS.TextInputLayout;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.XForms.iOS.Graphics;
+using Syncfusion.XForms.iOS.EffectsView;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.Buttons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,6 +37,20 @@ namespace Soons.iOS
             XF.Material.iOS.Material.Init();
             
             global::Xamarin.Forms.Forms.Init();
+            SfLinearProgressBarRenderer.Init();
+            SfCardViewRenderer.Init();
+            SfRatingRenderer.Init();
+            SfComboBoxRenderer.Init();
+            SfTextInputLayoutRenderer.Init();
+            SfAvatarViewRenderer.Init();
+            SfSegmentedControlRenderer.Init();
+            SfRadioButtonRenderer.Init();
+            SfListViewRenderer.Init();
+            SfEffectsViewRenderer.Init();
+            Core.Init();
+            SfGradientViewRenderer.Init();
+            SfBorderRenderer.Init();
+            SfButtonRenderer.Init();
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
 
             this.LoadApplication(new App());
