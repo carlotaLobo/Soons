@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Soons.Views.ResumenView">
+             x:Class="Soons.Views.ResumenView"
+             xmlns:viewmodels="clr-namespace:Soons.ViewModels"
+             xmlns:local="clr-namespace:Soons">
     <ContentPage.Content>
-        
+
+
         <StackLayout >
+    
             <Grid BackgroundColor="White" Padding="0,5,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -23,7 +27,7 @@
                              BackgroundColor="White" 
                              VerticalOptions="End">
                     <Frame Style="{StaticResource stlMainFrame}">
-                        <Grid Padding="25,0,25,0" RowSpacing="0">
+                        <Grid x:Name="grid" Padding="25,0,25,0" RowSpacing="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -37,7 +41,6 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                          
                             <Label Grid.Row="0" 
                                    Grid.Column="0" 
                                    Grid.ColumnSpan="3" 
@@ -59,48 +62,69 @@
                                         <Span Text="Stock" FontAttributes="Bold" />
                                     </FormattedString>
                                 </Label.FormattedText>
-                            </Label>                                
-                      
+                            </Label>
+                            <StackLayout 
+                                 BindingContext="{Binding Source={x:Static local:App.ServiceLocator}, Path=ModelViewStock}"
+                                 Grid.Row="3">
 
-                            <Label Grid.Row="3" 
+                                <ListView ItemsSource="{Binding Stock}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="{Binding Size}" />
+                                                    <Label Text="{Binding CantStock}" />
+                                                </StackLayout>            
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                    </ListView>
+                                    
+                                </StackLayout>
+                                <!--<Button Grid.Row="3" 
                                    Grid.Column="0" 
-                                   Text="36 - 4" 
+                                   Text="{Binding Size}" 
                                    Style="{StaticResource stlBoardTitle}" />
-                            <Label Grid.Row="4" 
+                                <Button Grid.Row="4" 
                                    Grid.Column="0" 
                                    Text="37 - 3"
                                     Style="{StaticResource stlBoardTitle}"
                                    />
-                            <Label Grid.Row="3" 
+                                <Button Grid.Row="3" 
                                    Grid.Column="1" 
                                    Text="38 - 77" 
                                    Style="{StaticResource stlBoardTitle}"/>
-                            <Label Grid.Row="4" 
+                                <Button Grid.Row="4" 
                                    Grid.Column="1" 
                                    Text="39 - 88" 
                                    Style="{StaticResource stlBoardTitle}"/>
-                            <Label Grid.Row="3" 
+                                <Button Grid.Row="3" 
                                    Grid.Column="2" 
                                    Text="40 - 33" 
                                    Style="{StaticResource stlBoardTitle}"/>
-                            <Label Grid.Row="4" 
+                                <Button Grid.Row="4" 
                                    Grid.Column="2" 
                                    Text="41 - 9" 
                                    Style="{StaticResource stlBoardTitle}"/>
-                            <Button Grid.Row="5" Grid.Column="0" 
+                                <Button Grid.Row="5" Grid.Column="0" 
                                     TextColor="White" 
                                     BackgroundColor="#222725" 
                                     Text="Añadir" Margin="0,20,0,2" 
                                     FontSize="13" HeightRequest="45"/>
-                            <Button Grid.Row="5" Grid.Column="1"  
+                                <Button Grid.Row="5" Grid.Column="1"  
                                     TextColor="White" BackgroundColor="#222725" 
                                     Text="Check Out" Margin="0,20,0,2" 
                                     FontSize="13" HeightRequest="45"/>
-                            <Button Grid.Row="5" Grid.Column="2"  
+                                <Button Grid.Row="5" Grid.Column="2"  
                                     TextColor="White" BackgroundColor="#222725" 
                                     Text="Modificar" Margin="0,20,0,2" 
-                                    FontSize="13" HeightRequest="45"/>
+                                    FontSize="13" HeightRequest="45"/>-->
+
+                           
+                          
                         </Grid>
+                       
+
                     </Frame>
                 </StackLayout>
                
